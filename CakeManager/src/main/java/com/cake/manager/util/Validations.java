@@ -34,15 +34,15 @@ public class Validations {
 		return sResult;
 	}
 
-	public static String validateCakeAlreadyExists(CakeDTO oCakeFiltered) throws Exception {
+	public static String validateCakeAlreadyExists(CakeDTO cakeFiltered) throws Exception {
 		
 		String sResult = "";
 
-		if (oCakeFiltered.getCakeName() != null && !oCakeFiltered.getCakeName().isEmpty()) {
+		if (cakeFiltered.getCakeName() != null && !cakeFiltered.getCakeName().isEmpty()) {
 
-			if (oCakeFiltered != null) {
-				log.error("The cake " + oCakeFiltered.getCakeName() + " already exist");
-				sResult="The cake " + oCakeFiltered.getCakeName() + " already exist";
+			if (cakeFiltered != null) {
+				log.error("The cake " + cakeFiltered.getCakeName() + " already exist");
+				sResult="The cake " + cakeFiltered.getCakeName() + " already exist";
 			}
 
 		} else {

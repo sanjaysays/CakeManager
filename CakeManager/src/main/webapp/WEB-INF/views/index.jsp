@@ -14,7 +14,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 <meta name="Description" content="Allocation Information." />
 <meta name="Distribution" content="internal" />
-<meta name="Author" content="Alvaro" />
+<meta name="Author" content="sanjay" />
 
 <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.css">

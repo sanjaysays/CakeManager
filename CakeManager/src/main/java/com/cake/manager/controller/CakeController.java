@@ -35,7 +35,7 @@ public class CakeController {
 
 	@RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ModelAndView getCakes() throws Exception {
-		List<CakeDTO> oListCakes = new ArrayList<CakeDTO>();
+		List<CakeDTO> oListCakes = new ArrayList<>();
 		ModelAndView modelAndView = new ModelAndView("index");
 
 		try {
@@ -53,7 +53,7 @@ public class CakeController {
 	public ModelAndView postCakes(final CakeDTO newCake) throws Exception {
 
 		log.info("postCakes-- ");
-		List<CakeDTO> oListCakes = new ArrayList<CakeDTO>();
+		List<CakeDTO> oListCakes = new ArrayList<>();
 		ModelAndView modelAndView = new ModelAndView("index");
 		int newCakeId = 0;
 		CakeDTO oCake = new CakeDTO();
@@ -83,7 +83,6 @@ public class CakeController {
 		} catch (Exception ex) {
 			log.error("Error postCakes. Cause: " + ex.getMessage());
 			sError = "Error postCakes. Cause: " + ex.getMessage();
-			//throw new Exception("Cake can not be created. Cause: " + ex.getMessage());
 		}
 
 		modelAndView.addObject("cakes",oListCakes);
@@ -98,7 +97,6 @@ public class CakeController {
 		List<CakeDTO> oListCakes = new ArrayList<CakeDTO>();
 		String sJSONData = "";
 
-		//Info Retrieval
 		try {
 			oListCakes = cakeService.findAll();
 			log.info("Cakes Retrieved Properly");
@@ -122,8 +120,6 @@ public class CakeController {
 
 		} catch (IOException ex) {
 			log.error("Error writing file to output stream.Filename was == > " + ex.getMessage());
-			// throw new RuntimeException("IOError writing file to output stream. Cause: " +
-			// ex.getMessage());
 		}
 
 		return null;
